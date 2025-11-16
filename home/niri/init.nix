@@ -59,7 +59,7 @@
     # Start dunst and background daemon
     spawn-at-startup = [ 
       { argv = [ "dunst" ]; }
-      { sh = "swaybg -i ${./wallpaper.png}"; }
+      { sh = "swaybg -m fill -i ${./wallpaper.png}"; }
     ];
     
     prefer-no-csd = true;

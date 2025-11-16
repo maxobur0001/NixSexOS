@@ -4,7 +4,7 @@
   programs.zsh.enable = true;
   programs.git.enable = true;
   programs.steam.enable = true;
-  programs.nixvim.enable = true;
+  # programs.nixvim.enable = true;
 
   environment.systemPackages = with pkgs; [
     vim
