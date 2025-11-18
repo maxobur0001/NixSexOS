@@ -15,13 +15,24 @@
   outputs = { nixpkgs, home-manager, niri, nixvim, ... }: 
     let
       system = "x86_64-linux";
-    in {
-    nixosConfigurations.sexos = nixpkgs.lib.nixosSystem {
-      inherit system;
-      modules = [
-        niri.nixosModules.niri
-        ./configuration.nix
-      ];
+
+      # This lets us reuse the code to "create" a system
+      # Credits go to sioodmy on this one!
+      # https://github.com/sioodmy/dotfiles/blob/main/flake.nix
+      mkSystem = pkgs: system: hostname:
+        pkgs.lib.nixosSystem {
+          inherit system;
+          modules = [
+            niri.nixosModules.niri
+            { networking.hostName = hostname; }
+            ./configuration.nix
+            ./hosts/${hostname}/hardware-configuration.nix
+          ];
+        };
+
+  in {
+    nixosConfigurations = {
+      sexos = mkSystem nixpkgs system "sexos";
     };
     homeConfigurations.maxobur0001 = home-manager.lib.homeManagerConfiguration {
       pkgs = nixpkgs.legacyPackages.${system};
