@@ -11,10 +11,10 @@
   imports = [
     ./kitty.nix
     ./zsh.nix
-    ./nixvim/init.nix
-    ./niri/init.nix
-    ./rofi/init.nix
-    ./qutebrowser/init.nix
+    ./nixvim
+    ./niri
+    ./rofi
+    ./qutebrowser
     ./dunst.nix
     ./gh.nix
   ];

@@ -1,4 +1,4 @@
-{config, pkgs, ...}: {
+{...}: {
   imports = [
     ./zapret/init.nix
   ];
@@ -9,5 +9,7 @@
   services.pipewire = {
     enable = true;
     pulse.enable = true;
+    alsa.enable = true;
+    jack.enable = true;
   };
 }

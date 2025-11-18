@@ -1,10 +1,10 @@
-{ config, lib, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   imports =
     [
       ./hardware-configuration.nix
-      ./packages/init.nix
+      ./packages
     ];
 
   # Use the systemd-boot EFI boot loader.

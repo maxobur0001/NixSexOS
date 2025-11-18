@@ -12,7 +12,7 @@
     };
     nixvim.url = "github:nix-community/nixvim";
   };
-  outputs = { nixpkgs, home-manager, niri, nixvim, ... }@inputs: 
+  outputs = { nixpkgs, home-manager, niri, nixvim, ... }: 
     let
       system = "x86_64-linux";
     in {
@@ -28,7 +28,7 @@
       modules = [
         niri.homeModules.niri
         nixvim.homeModules.nixvim
-        ./home/home.nix
+        ./home
       ];
     };
   };

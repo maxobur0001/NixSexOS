@@ -1,11 +1,11 @@
-{config, pkgs, ...}: {
+{...}: {
   programs.zsh = {
     enable = true;
     syntaxHighlighting.enable = true;
     shellAliases = {
-      update = "sudo nixos-rebuild switch --flake ~/nix";
+      update = "sudo nixos-rebuild switch --flake ~/.config/nixos";
       clear-garbage = "sudo nix-collect-garbage -d";
-      home-update = "home-manager switch --flake ~/nix";
+      home-update = "home-manager switch --flake ~/.config/nixos";
       cd = "z";
       ls = "eza --icons=always -1";
     };
