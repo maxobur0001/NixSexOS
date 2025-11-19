@@ -19,7 +19,7 @@
   users.users.maxobur0001 = {
     isNormalUser = true;
     shell = pkgs.zsh;
-    extraGroups = [ "wheel" "networkmanager" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "networkmanager" "audio" "video" ]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
       tree
     ];
@@ -33,6 +33,7 @@
   };
   security.rtkit.enable = true;
 
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   # don't touch it folk

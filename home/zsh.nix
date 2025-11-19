@@ -4,6 +4,7 @@
     syntaxHighlighting.enable = true;
     shellAliases = {
       update = "sudo nixos-rebuild switch --flake ~/.config/nixos";
+      upgrade = "sudo nixos-rebuild --upgrade switch --flake ~/.config/nixos";
       clear-garbage = "sudo nix-collect-garbage -d";
       home-update = "home-manager switch --flake ~/.config/nixos";
       cd = "z";

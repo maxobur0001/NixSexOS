@@ -1,5 +1,4 @@
 {pkgs, lib, ...}: {
-  programs.niri.enable = true;
   programs.xwayland.enable = true;
   programs.zsh.enable = true;
   programs.git.enable = true;
@@ -37,8 +36,7 @@
     telegram-desktop
     godot
     yazi
-    nemo
-    obs-studio
+    nautilus
   ];
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowInsecurePredicate = pkg:
