@@ -13,6 +13,18 @@
           natural-scroll = true;
       };
     };
+
+    # My main monitor on worldmachine
+    outputs."HDMI-A-1" = {
+      enable = true;
+      mode = {
+          width = 1920;
+          height = 1080;
+          refresh = 100.000;
+      };
+      scale = 1;
+      position = { x = 1280; y = 0; };
+    };
   
     # Disable Hot-corner
     gestures.hot-corners.enable = false;

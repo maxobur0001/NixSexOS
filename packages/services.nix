@@ -1,6 +1,6 @@
 {...}: {
   imports = [
-    ./zapret/init.nix
+    ./zapret
   ];
   services.xserver.enable = true;
   services.printing.enable = true;
