@@ -33,6 +33,7 @@
   in {
     nixosConfigurations = {
       sexos = mkSystem nixpkgs system "sexos";
+      worldmachine = mkSystem nixpkgs system "worldmachine";
     };
     homeConfigurations.maxobur0001 = home-manager.lib.homeManagerConfiguration {
       pkgs = nixpkgs.legacyPackages.${system};

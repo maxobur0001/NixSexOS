@@ -18,7 +18,7 @@
     pulseaudio
     libnotify
     playerctl
-    discord
+    # discord
     eza
     fastfetch
     xwayland-satellite
