@@ -22,9 +22,10 @@
     eza
     fastfetch
     xwayland-satellite
+    blobdrop
+    btop
     mpv
     kew
-    xdg-desktop-portal-gnome
     audacity
     blender
     obsidian
@@ -35,6 +36,9 @@
     thunderbird
     telegram-desktop
     godot
+    yazi
+    nemo
+    obs-studio
   ];
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowInsecurePredicate = pkg:

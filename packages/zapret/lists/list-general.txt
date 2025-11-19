@@ -127992,4 +127992,5 @@ linuxvox.com
 cachix.org
 nixos.wiki
 nixos.org
-*.nixos.org
+wiki.nixos.org
+downloads.nixos.org

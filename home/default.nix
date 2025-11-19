@@ -17,5 +17,6 @@
     ./qutebrowser
     ./dunst.nix
     ./gh.nix
+    ./xdg.nix
   ];
 }

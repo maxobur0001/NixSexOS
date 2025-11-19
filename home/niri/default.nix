@@ -30,7 +30,7 @@
     gestures.hot-corners.enable = false;
   
     # Fix for electron apps (like discord, obsidian, steam and etc)
-    environment."ELECTRON_OZONE_PLATFORM_HINT" = "auto";
+    environment."NIXOS_OZONE_WL" = 1;
 
     # Rule for transparent background in overview
     layer-rules = [

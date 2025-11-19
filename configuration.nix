@@ -24,12 +24,14 @@
       tree
     ];
   };
+
   security.sudo = {
     enable = true;
     extraConfig = ''
     maxobur0001 ALL=(ALL:ALL) NOPASSWD: ALL
     '';
   };
+  security.rtkit.enable = true;
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
