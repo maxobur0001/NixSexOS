@@ -33,7 +33,10 @@
   };
   security.rtkit.enable = true;
 
-  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+  environment.sessionVariables = {
+    "NIXOS_OZONE_WL" = "1";
+    "DEFAULT_BROWSER" = "${pkgs.qutebrowser}/bin/qutebrowser";
+  };
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   # don't touch it folk

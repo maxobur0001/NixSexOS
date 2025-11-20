@@ -1,5 +1,6 @@
 {pkgs, lib, ...}: {
   programs.xwayland.enable = true;
+  programs.niri.enable = true;
   programs.zsh.enable = true;
   programs.git.enable = true;
   programs.steam.enable = true;
