@@ -29,9 +29,16 @@
   # Lua Language Server
   plugins.lsp.servers.lua_ls = {
     enable = true;
-    settings.Lua = {
+    settings = {
       runtime.version = "LuaJIT";
       diagnostics.globals = [ "vim" ];
+      workspace = {
+        checkThirdParty = false;
+        library = [
+          "${../luals/starfall.lua}"
+          "${../luals/glua}"
+        ];
+      };
     };
   };
 

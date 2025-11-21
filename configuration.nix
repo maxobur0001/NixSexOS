@@ -6,6 +6,7 @@
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.kernelPackages = pkgs.linuxPackages_zen;
 
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
 
@@ -14,6 +15,7 @@
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
+  i18n.extraLocales = "all";
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.maxobur0001 = {
@@ -41,6 +43,5 @@
 
   # don't touch it folk
   system.stateVersion = "25.05"; # Did you read the comment?
-
 }
 
