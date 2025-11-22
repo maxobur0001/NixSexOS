@@ -15,7 +15,7 @@
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
-  i18n.extraLocales = "all";
+  i18n.supportedLocales = [ "en_US.UTF-8/UTF-8" "ru_RU.UTF-8/UTF-8" ];
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.maxobur0001 = {

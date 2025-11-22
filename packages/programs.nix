@@ -3,10 +3,9 @@
   programs.niri.enable = true;
   programs.zsh.enable = true;
   programs.git.enable = true;
+  programs.gamescope.enable = true;
   programs.steam = {
-    package = pkgs.steam-small;
     enable = true;
-    gamescopeSession.enable = true;
   };
 
   environment.systemPackages = with pkgs; [
@@ -49,16 +48,20 @@
     docker
     cargo
     rustc
+    prismlauncher
+    gamemode
+    gnome-calculator
   ];
   fonts.packages = with pkgs; [
     noto-fonts
-    dejavu_fonts
     liberation_ttf
+    gyre-fonts
     wqy_zenhei
   ];
   fonts.fontconfig = {
     enable = true;
     cache32Bit = true;
+    allowBitmaps = true;
   };
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowInsecurePredicate = pkg:
