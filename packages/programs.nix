@@ -1,4 +1,4 @@
-{pkgs, lib, ...}: {
+{pkgs, lib, inputs, ...}: {
   programs.xwayland.enable = true;
   programs.niri.enable = true;
   programs.zsh.enable = true;
@@ -6,14 +6,18 @@
   programs.gamescope.enable = true;
   programs.steam = {
     enable = true;
+    fontPackages = with pkgs; [
+      noto-fonts
+      wqy_zenhei
+    ];
   };
+  programs.appimage.enable = true;
 
   environment.systemPackages = with pkgs; [
     vim
     wget
     home-manager
     brightnessctl
-    bluez
     pulseaudio
     libnotify
     wl-clipboard
@@ -30,10 +34,8 @@
     mpv
     kew
     audacity
-    blender
     obsidian
     imagemagick
-    mindustry
     libreoffice
     bluetui
     thunderbird
@@ -48,21 +50,16 @@
     docker
     cargo
     rustc
-    prismlauncher
     gamemode
     gnome-calculator
+    gcc
+    inputs.prismlauncher.packages.${pkgs.stdenv.system}.default
   ];
   fonts.packages = with pkgs; [
     noto-fonts
-    liberation_ttf
-    gyre-fonts
-    wqy_zenhei
   ];
-  fonts.fontconfig = {
-    enable = true;
-    cache32Bit = true;
-    allowBitmaps = true;
-  };
+  fonts.fontconfig.enable = true;
+
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowInsecurePredicate = pkg:
     builtins.elem (lib.getName pkg) [

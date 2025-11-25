@@ -42,6 +42,9 @@
     };
   };
 
+  # Rust analyzer
+  plugins.lsp.servers.rust_analyzer.enable = true;
+
   keymaps = [
     # Documentation
     {

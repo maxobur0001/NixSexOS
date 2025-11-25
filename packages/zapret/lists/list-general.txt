@@ -127993,3 +127993,10 @@ cachix.org
 nixos.wiki
 wiki.nixos.org
 *.cachix.org
+mynixos.com
+imgur.com
+*.imgur.com
+istockphoto.com
+*.istockphoto.com
+dropbox.com
+*.dropbox.com

@@ -10,9 +10,10 @@
       url = "github:sodiboo/niri-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    prismlauncher.url = "github:Diegiwg/PrismLauncher-Cracked";
     nixvim.url = "github:nix-community/nixvim";
   };
-  outputs = { nixpkgs, home-manager, niri, nixvim, ... }: 
+  outputs = { nixpkgs, home-manager, niri, nixvim, ... }@inputs: 
     let
       system = "x86_64-linux";
 
@@ -22,6 +23,9 @@
       mkSystem = pkgs: system: hostname:
         pkgs.lib.nixosSystem {
           inherit system;
+          specialArgs = {
+            inherit inputs;
+          };
           modules = [
             niri.nixosModules.niri
             { networking.hostName = hostname; }

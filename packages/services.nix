@@ -1,4 +1,4 @@
-{...}: {
+{pkgs, ...}: {
   imports = [
     ./zapret
   ];
@@ -7,6 +7,10 @@
     enable = true;
     xkb.layout = "us,ru";
     xkb.options = "grp:ctrl_space_toggle";
+    windowManager.i3 = {
+      enable = true;
+      extraPackages = [ pkgs.dmenu ];
+    };
   };
   services.printing.enable = true;
   services.libinput.enable = true;
@@ -18,5 +22,18 @@
     alsa.support32Bit = true;
     wireplumber.enable = true;
     jack.enable = true;
+  };
+  services.postgresql = {
+    enable = true;
+    ensureDatabases = [ "vanillitybot" ];
+    authentication = pkgs.lib.mkOverride 10 ''
+    #type database DBuser auth-method
+    local all      all    trust
+    '';
+
+  };
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
   };
 }
