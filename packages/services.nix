@@ -27,8 +27,8 @@
     enable = true;
     ensureDatabases = [ "vanillitybot" ];
     authentication = pkgs.lib.mkOverride 10 ''
-    #type database DBuser auth-method
-    local all      all    trust
+    #type  database  DBuser  auth-method
+    local  all       all     trust
     '';
 
   };

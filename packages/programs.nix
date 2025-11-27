@@ -54,6 +54,7 @@
     gnome-calculator
     gcc
     inputs.prismlauncher.packages.${pkgs.stdenv.system}.default
+    qbittorrent
   ];
   fonts.packages = with pkgs; [
     noto-fonts
