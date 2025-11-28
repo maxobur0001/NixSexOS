@@ -53,7 +53,7 @@
     gamemode
     gnome-calculator
     gcc
-    inputs.prismlauncher.packages.${pkgs.stdenv.system}.default
+    inputs.prismlauncher.packages.${pkgs.stdenv.system}.prismlauncher
     qbittorrent
   ];
   fonts.packages = with pkgs; [
