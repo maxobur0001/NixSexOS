@@ -1,8 +1,6 @@
 { config, pkgs, lib, ...}: {
   programs.qutebrowser.enable = true;
   programs.qutebrowser.extraConfig = ''
-config.load_autoconfig()
-
 c.auto_save.session = True
 c.tabs.position = "top"
 
@@ -186,7 +184,7 @@ c.colors.tooltip.fg = COLORS["purple"]
 
 ###### Webpage ######
 c.colors.webpage.bg = COLORS["black"]
-c.colors.webpage.darkmode.enabled = True
+c.colors.webpage.preferred_color_scheme = "dark"
 
 
 ###### Fonts ######
