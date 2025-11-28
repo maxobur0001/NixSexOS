@@ -43,7 +43,11 @@
   };
 
   # Rust analyzer
-  plugins.lsp.servers.rust_analyzer.enable = true;
+  plugins.lsp.servers.rust_analyzer = {
+    enable = true;
+    installRustc = false;
+    installCargo = false;
+  };
 
   keymaps = [
     # Documentation
