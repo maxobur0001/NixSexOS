@@ -12,6 +12,7 @@
     ];
   };
   programs.appimage.enable = true;
+  programs.adb.enable = true;
 
   environment.systemPackages = with pkgs; [
     vim
@@ -55,6 +56,8 @@
     gcc
     inputs.prismlauncher.packages.${pkgs.stdenv.system}.prismlauncher
     qbittorrent
+    steamcmd
+    gdb
   ];
   fonts.packages = with pkgs; [
     noto-fonts

@@ -15,7 +15,6 @@
     ./qutebrowser
     ./dunst.nix
     ./gh.nix
-    ./xdg.nix
     ./obs-studio.nix
     ./gtk.nix
   ];

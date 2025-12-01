@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ...}: {
+{ pkgs, ...}: {
   programs.kitty = {
     enable = true;
     font = {
@@ -6,6 +6,7 @@
       name = "Terminess Nerd Font Mono";
       size = 15;
     };
+    shellIntegration.enableZshIntegration = true;
     settings = {
       enable_audio_bell = false; 
       window_padding_height = 25;
