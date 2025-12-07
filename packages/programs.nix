@@ -58,6 +58,8 @@
     qbittorrent
     steamcmd
     gdb
+    vscodium
+    r2modman
   ];
   fonts.packages = with pkgs; [
     noto-fonts

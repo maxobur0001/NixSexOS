@@ -128000,3 +128000,7 @@ istockphoto.com
 *.istockphoto.com
 dropbox.com
 *.dropbox.com
+ngrok.com
+*.ngrok.com
+open-vsx.org
+*.open-vsx.org

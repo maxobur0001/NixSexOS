@@ -12,7 +12,10 @@
       extraPackages = [ pkgs.dmenu ];
     };
   };
-  services.printing.enable = true;
+  services.printing = {
+    enable = true;
+    drivers = [ pkgs.hplipWithPlugin pkgs.hplip ];
+  };
   services.libinput.enable = true;
   services.openssh.enable = true;
   services.pipewire = {
@@ -30,7 +33,6 @@
     local all  all  trust
     host  all  all 127.0.0.1/32 trust
     '';
-
   };
   hardware.bluetooth = {
     enable = true;
