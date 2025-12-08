@@ -71,7 +71,7 @@
     # Start dunst and background daemon
     spawn-at-startup = [ 
       { argv = [ "dunst" ]; }
-      { sh = "swaybg -m fill -i ${./wallpaper.png}"; }
+      { sh = "mpvpaper -o \"no-audio loop\" ALL ${./wallpaper.mp4}"; }
     ];
     
     prefer-no-csd = true;

@@ -28,7 +28,6 @@
     slurp
     discord
     eza
-    fastfetch
     xwayland-satellite
     blobdrop
     btop
@@ -60,10 +59,14 @@
     gdb
     vscodium
     r2modman
+    ffmpeg
+    mpvpaper
   ];
+
   fonts.packages = with pkgs; [
     noto-fonts
   ];
+
   fonts.fontconfig.enable = true;
 
   nixpkgs.config.allowUnfree = true;
