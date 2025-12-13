@@ -2356,7 +2356,7 @@ _G.prop.SENT_Data_Structures = {
 	---@param ang Angle Angle of created seat
 	---@param model string Model of created seat
 	---@param frozen boolean? True to spawn the entity in a frozen state. Default = False
-	---@return Entity undefined The seat object
+	---@return Vehicle undefined The seat object
 	function _G.prop.createSeat(pos, ang, model, frozen) end
 	--- propsLeft - server - libs_sv/prop.lua#L716
 	---@return number undefined Number of props able to be spawned

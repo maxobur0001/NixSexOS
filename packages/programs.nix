@@ -61,6 +61,8 @@
     r2modman
     ffmpeg
     mpvpaper
+    aseprite
+    guitarix
   ];
 
   fonts.packages = with pkgs; [
