@@ -8,8 +8,13 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.supportedFilesystems = [ "ntfs" ];
   boot.kernelPackages = pkgs.linuxPackages_zen;
-
-  networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
+  services.resolved = {
+    enable = true;
+    extraConfig = ''
+    nameserver 1.1.1.1
+    '';
+  };
+  networking.networkmanager.enable = true;
 
   # Set your time zone.
   time.timeZone = "Europe/Moscow";

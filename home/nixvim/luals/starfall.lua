@@ -3814,7 +3814,7 @@ _G["CLIENT"] = nil
 	---@param chip Entity? The chip to restart. If nil, it will restart the current chip.
 	function _G.restart(chip) end
 	--- enableHud - shared - libs_sh/builtins.lua#L1232
-	---@param ply Player The player to enable the hud on. If CLIENT, will be forced to player()
+	---@param ply Player? The player to enable the hud on. If CLIENT, will be forced to player()
 	---@param active boolean Whether hud hooks should be active. true to force on, false to force off.
 	function _G.enableHud(ply, active) end
 	--- worldToLocal - shared - libs_sh/builtins.lua#L1194
