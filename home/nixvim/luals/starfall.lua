@@ -1,4 +1,5 @@
 ---@meta
+_G.continue = nil
 -- Generated with emmyfall
 ---@alias hooks
 ---| '"OnPhysgunPickup"' #  Called when a player has successfully picked up an entity with their Physics Gun.  Not to be confused with PhysgunPickup which is a predicted hook
@@ -176,9 +177,9 @@ _G.bass = {}
 _G.hook = {}
 	--- run - shared - libs_sh/hook.lua#L703
 	---@param hookname string The hook name
-	---@param arguments ... Arguments to pass to the hook
-	---@return ... undefined returns Return result(s) of the hook ran
-	function _G.hook.run(hookname, arguments) end
+	---@param ... any Arguments to pass to the hook
+	---@return ... Returns Return result(s) of the hook ran
+	function _G.hook.run(hookname, ...) end
 	--- add - shared - libs_sh/hook.lua#L683
 	---@param hookname hooks Name of the event
 	---@param name string Unique identifier

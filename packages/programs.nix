@@ -48,8 +48,7 @@
     unrar
     p7zip
     docker
-    cargo
-    rustc
+    rustup
     gamemode
     gnome-calculator
     gcc
@@ -63,6 +62,8 @@
     mpvpaper
     aseprite
     guitarix
+    vtfedit
+    blender
   ];
 
   fonts.packages = with pkgs; [

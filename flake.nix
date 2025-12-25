@@ -2,6 +2,7 @@
   description = "The really SexOS configuration";
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager = {
       url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -13,7 +14,7 @@
     prismlauncher.url = "github:Diegiwg/PrismLauncher-Cracked";
     nixvim.url = "github:nix-community/nixvim";
   };
-  outputs = { nixpkgs, home-manager, niri, nixvim, ... }@inputs: 
+  outputs = { nixpkgs, nixpkgs-unstable, home-manager, niri, nixvim, ... }@inputs: 
     let
       system = "x86_64-linux";
 
@@ -25,6 +26,7 @@
           inherit system;
           specialArgs = {
             inherit inputs;
+            inherit nixpkgs-unstable;
           };
           modules = [
             niri.nixosModules.niri
