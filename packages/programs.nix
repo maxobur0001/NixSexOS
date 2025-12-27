@@ -13,6 +13,10 @@
   };
   programs.appimage.enable = true;
   programs.adb.enable = true;
+  programs.wireshark = {
+    enable = true;
+    dumpcap.enable = true;
+  };
 
   environment.systemPackages = with pkgs; [
     vim

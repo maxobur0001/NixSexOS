@@ -27,7 +27,7 @@
   users.users.maxobur0001 = {
     isNormalUser = true;
     shell = pkgs.zsh;
-    extraGroups = [ "wheel" "networkmanager" "audio" "video" "adbusers" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "networkmanager" "audio" "video" "adbusers" "wireshark" ];
     packages = with pkgs; [
       tree
     ];
