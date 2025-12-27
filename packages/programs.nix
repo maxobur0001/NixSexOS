@@ -64,7 +64,6 @@
     guitarix
     vtfedit
     blender
-    cloudflare-warp
   ];
 
   fonts.packages = with pkgs; [

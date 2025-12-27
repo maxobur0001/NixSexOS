@@ -34,6 +34,9 @@
     host  all  all 127.0.0.1/32 trust
     '';
   };
+  services.cloudflare-warp = {
+    enable = true;
+  };
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = true;

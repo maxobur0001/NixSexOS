@@ -128005,3 +128005,4 @@ ngrok.com
 open-vsx.org
 *.open-vsx.org
 sweezy-cursors.com
+api.cloudflareclient.com
