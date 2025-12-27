@@ -17,6 +17,7 @@
   outputs = { nixpkgs, nixpkgs-unstable, home-manager, niri, nixvim, ... }@inputs: 
     let
       system = "x86_64-linux";
+      pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
 
       # This lets us reuse the code to "create" a system
       # Credits go to sioodmy on this one!
@@ -26,7 +27,7 @@
           inherit system;
           specialArgs = {
             inherit inputs;
-            inherit nixpkgs-unstable;
+            inherit pkgs-unstable;
           };
           modules = [
             niri.nixosModules.niri
