@@ -18,5 +18,6 @@
     ./obs-studio.nix
     ./gtk.nix
     ./fastfetch
+    ./xdg.nix
   ];
 }

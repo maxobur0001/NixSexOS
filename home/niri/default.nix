@@ -1,5 +1,6 @@
 { config, lib, pkgs, inputs, ...}: {
   programs.niri.enable = true;
+  programs.niri.package = pkgs.niri;
   programs.niri.settings = {
     # Input
     input = {

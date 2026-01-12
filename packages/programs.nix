@@ -1,6 +1,9 @@
-{pkgs, lib, inputs, ...}: {
+{pkgs, lib, ...}: {
   programs.xwayland.enable = true;
-  programs.niri.enable = true;
+  programs.niri = {
+    enable = true;
+    package = pkgs.niri;
+  };
   programs.zsh.enable = true;
   programs.git.enable = true;
   programs.gamescope.enable = true;
@@ -13,10 +16,6 @@
   };
   programs.appimage.enable = true;
   programs.adb.enable = true;
-  programs.wireshark = {
-    enable = true;
-    dumpcap.enable = true;
-  };
 
   environment.systemPackages = with pkgs; [
     vim
@@ -44,8 +43,6 @@
     bluetui
     thunderbird
     telegram-desktop
-    godot
-    yazi
     nautilus
     unzip
     zip
@@ -56,18 +53,14 @@
     gamemode
     gnome-calculator
     gcc
-    inputs.prismlauncher.packages.${pkgs.stdenv.system}.prismlauncher
     qbittorrent
     steamcmd
     gdb
-    vscodium
     r2modman
     ffmpeg
     mpvpaper
-    aseprite
-    guitarix
-    vtfedit
     blender
+    lua
   ];
 
   fonts.packages = with pkgs; [
