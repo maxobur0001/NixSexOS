@@ -21,10 +21,7 @@
   users.users.maxobur0001 = {
     isNormalUser = true;
     shell = pkgs.zsh;
-    extraGroups = [ "wheel" "networkmanager" "audio" "video" "adbusers" "wireshark" ];
-    packages = with pkgs; [
-      tree
-    ];
+    extraGroups = [ "wheel" "networkmanager" "audio" "video" "adbusers" "wireshark" "docker" ];
   };
 
   security.sudo = {
@@ -37,7 +34,6 @@
 
   environment.sessionVariables = {
     "NIXOS_OZONE_WL" = "1";
-    "DEFAULT_BROWSER" = "${pkgs.qutebrowser}/bin/qutebrowser";
   };
   nix.settings.experimental-features = ["nix-command" "flakes"];
 

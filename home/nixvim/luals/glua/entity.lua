@@ -1986,7 +1986,7 @@ function Entity:GetNWVector(key, fallback) end
 --- 	**NOTE**: This function is generally used to disable physics interactions on projectiles being fired by their owner, but can also be used for normal ownership in case physics interactions are not involved at all. The Gravity gun will be able to pick up the entity even if the owner can't collide with it, the Physics gun however will not.
 ---
 ---[(View on wiki)](https://wiki.facepunch.com/gmod/Entity:GetOwner)
----@return Entity # The owner entity of this entity.
+---@return Player | NPC | Entity # The owner entity of this entity.
 function Entity:GetOwner() end
 
 ---[SHARED] Returns the parent entity of this entity.

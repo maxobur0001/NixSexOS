@@ -1,5 +1,4 @@
 ---@meta
-_G.continue = nil
 -- Generated with emmyfall
 ---@alias hooks
 ---| '"OnPhysgunPickup"' #  Called when a player has successfully picked up an entity with their Physics Gun.  Not to be confused with PhysgunPickup which is a predicted hook

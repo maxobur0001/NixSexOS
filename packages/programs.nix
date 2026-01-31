@@ -1,4 +1,4 @@
-{pkgs, lib, ...}: {
+{pkgs, pkgs-old, lib, ...}: {
   programs.xwayland.enable = true;
   programs.niri = {
     enable = true;
@@ -44,11 +44,10 @@
     thunderbird
     telegram-desktop
     nautilus
-    unzip
     zip
-    unrar
     p7zip
-    docker
+    unzip
+    unrar
     rustup
     gamemode
     gnome-calculator
@@ -56,11 +55,17 @@
     qbittorrent
     steamcmd
     gdb
-    r2modman
     ffmpeg
     mpvpaper
     blender
     lua
+    gimp
+    feh
+    vtfedit
+    wine
+    winetricks
+    wine64
+    stylua
   ];
 
   fonts.packages = with pkgs; [
@@ -73,5 +78,6 @@
   nixpkgs.config.allowInsecurePredicate = pkg:
     builtins.elem (lib.getName pkg) [
       "broadcom-sta"
+      "libsoup"
     ];
 }
