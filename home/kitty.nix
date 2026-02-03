@@ -12,7 +12,6 @@
       window_padding_height = 25;
       window_padding_width = 25;
       confirm_os_window_close = 0;
-      cursor_trail = 9;
     };
   };
   programs.kitty.extraConfig = ''

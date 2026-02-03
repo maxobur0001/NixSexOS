@@ -2,7 +2,7 @@
   home = {
     username = "maxobur0001";
     homeDirectory = "/home/maxobur0001";
-    stateVersion = "25.05";
+    stateVersion = "25.11";
     packages = [ ];
   };
 

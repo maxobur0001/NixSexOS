@@ -16,9 +16,21 @@
   };
   programs.appimage.enable = true;
   programs.adb.enable = true;
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    stdenv.cc.cc
+    zlib
+    fuse3
+    icu
+    nss
+    openssl
+    curl
+    expat
+  ];
 
   environment.systemPackages = with pkgs; [
     vim
+    ranger
     wget
     home-manager
     brightnessctl
@@ -43,7 +55,6 @@
     bluetui
     thunderbird
     telegram-desktop
-    nautilus
     zip
     p7zip
     unzip
@@ -62,10 +73,11 @@
     gimp
     feh
     vtfedit
-    wine
+    wineWowPackages.stable
     winetricks
-    wine64
     stylua
+    gmad
+    bottles
   ];
 
   fonts.packages = with pkgs; [

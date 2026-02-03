@@ -41,7 +41,7 @@
       }
     ];
 
-    # Steam notifications rule
+    # Window rules
     window-rules = [
       {
         matches = [ { app-id = "steam"; title = "^notificationtoasts_\\d+_desktop$"; } ];
@@ -50,6 +50,16 @@
           relative-to = "bottom-right";
         };
         open-focused = false;
+      }
+      {
+        matches = [
+          { app-id = "kitty"; title = "^termfilechooser$"; }
+          { app-id = "file_chooser"; title = "^ranger$"; }
+        ];
+        open-floating = true;
+        max-height = 480;
+        max-width = 640;
+        default-window-height.fixed = 480;
       }
     ];
 

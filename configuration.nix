@@ -8,7 +8,14 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.supportedFilesystems = [ "ntfs" ];
   boot.kernelPackages = pkgs.linuxPackages_zen;
-  networking.networkmanager.enable = true;
+  networking = {
+    networkmanager.enable = true;
+    firewall = {
+      enable = true;
+      allowedTCPPorts = [ 22 80 443 27005 27015 27016 ];
+      allowedUDPPorts = [ 22 80 443 27005 27015 27016 ];
+    };
+  };
 
   # Set your time zone.
   time.timeZone = "Europe/Moscow";

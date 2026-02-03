@@ -9,5 +9,6 @@
     ./nvim-lspconfig.nix
     ./trouble.nix
     ./terminal.nix
+    ./comment.nix
   ];
 }

@@ -49,11 +49,34 @@
     portal = {
       enable = true;
       extraPortals = with pkgs; [
-        xdg-desktop-portal-gnome
-        xdg-desktop-portal-gtk
+        xdg-desktop-portal-termfilechooser
         xdg-desktop-portal-wlr
+        xdg-desktop-portal-gtk
       ];
+      config.common = {
+        "*" = "wlr";
+        "org.freedesktop.impl.portal.FileChooser" = "termfilechooser";
+        "org.freedesktop.portal.OpenURI" = "gtk";
+      };
       xdgOpenUsePortal = true;
     };
+    terminal-exec = {
+      enable = true;
+      settings = {
+        default = [
+          "kitty.desktop"
+        ];
+      };
+    };
+    configFile."xdg-desktop-portal-termfilechooser/config" =
+    {
+      force = true;
+      text =
+      ''
+        [filechooser]
+        cmd=${pkgs.xdg-desktop-portal-termfilechooser}/share/xdg-desktop-portal-termfilechooser/ranger-wrapper.sh
+      '';
+    };
   };
+  home.sessionVariables.TERMCMD = "kitty --class=file_chooser";
 }
