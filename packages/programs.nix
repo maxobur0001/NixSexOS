@@ -41,7 +41,6 @@
     swaybg
     grim
     slurp
-    discord
     eza
     xwayland-satellite
     blobdrop
@@ -78,6 +77,7 @@
     stylua
     gmad
     bottles
+    legcord
   ];
 
   fonts.packages = with pkgs; [

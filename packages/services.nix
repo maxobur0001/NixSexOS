@@ -10,6 +10,7 @@
       enable = true;
       extraPackages = [ pkgs.dmenu ];
     };
+    excludePackages = [ pkgs.xterm ];
   };
   services.printing = {
     enable = true;
