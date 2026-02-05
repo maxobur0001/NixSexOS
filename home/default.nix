@@ -15,7 +15,6 @@
     ./qutebrowser
     ./dunst.nix
     ./gh.nix
-    ./obs-studio.nix
     ./gtk.nix
     ./fastfetch
     ./xdg.nix

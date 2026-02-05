@@ -6,15 +6,11 @@
     enable = true;
     xkb.layout = "us,ru";
     xkb.options = "grp:ctrl_space_toggle";
-    windowManager.i3 = {
-      enable = true;
-      extraPackages = [ pkgs.dmenu ];
-    };
     excludePackages = [ pkgs.xterm ];
   };
   services.printing = {
     enable = true;
-    drivers = [ pkgs.hplipWithPlugin pkgs.hplip ];
+    drivers = [ pkgs.hplipWithPlugin ];
   };
   services.libinput.enable = true;
   services.openssh.enable = true;

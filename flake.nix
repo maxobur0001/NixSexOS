@@ -2,7 +2,6 @@
   description = "The really SexOS configuration";
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
-    nixpkgs-old.url = "github:nixos/nixpkgs/nixos-25.05";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager = {
       url = "github:nix-community/home-manager/release-25.11";
@@ -14,11 +13,10 @@
     };
     nixvim.url = "github:nix-community/nixvim";
   };
-  outputs = { nixpkgs, nixpkgs-unstable, nixpkgs-old, home-manager, niri, nixvim, ... }@inputs: 
+  outputs = { nixpkgs, nixpkgs-unstable, home-manager, niri, nixvim, ... }@inputs: 
     let
       system = "x86_64-linux";
       pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
-      pkgs-old = nixpkgs-old.legacyPackages.${system};
 
       # This lets us reuse the code to "create" a system
       # Credits go to sioodmy on this one!
@@ -29,7 +27,6 @@
           specialArgs = {
             inherit inputs;
             inherit pkgs-unstable;
-            inherit pkgs-old;
           };
           modules = [
             niri.nixosModules.niri

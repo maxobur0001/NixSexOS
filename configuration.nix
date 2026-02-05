@@ -41,10 +41,11 @@
 
   environment.sessionVariables = {
     "NIXOS_OZONE_WL" = "1";
+    "EDITOR" = "nvim";
   };
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   # don't touch it folk
-  system.stateVersion = "25.05"; # Did you read the comment?
+  system.stateVersion = "25.05";
 }
 

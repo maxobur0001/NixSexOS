@@ -1,4 +1,4 @@
-{pkgs, pkgs-old, lib, ...}: {
+{pkgs, lib, ...}: {
   programs.xwayland.enable = true;
   programs.niri = {
     enable = true;
@@ -71,13 +71,12 @@
     lua
     gimp
     feh
-    vtfedit
     wineWowPackages.stable
     winetricks
     stylua
     gmad
-    bottles
     legcord
+    krita
   ];
 
   fonts.packages = with pkgs; [
