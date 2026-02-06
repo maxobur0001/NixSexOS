@@ -10,5 +10,6 @@
     ./trouble.nix
     ./terminal.nix
     ./comment.nix
+    ./presence.nix
   ];
 }

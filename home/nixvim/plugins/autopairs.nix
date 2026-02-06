@@ -1,4 +1,4 @@
-{pkg, ...}: {
+{...}: {
   plugins.treesitter.enable = true;
   plugins.nvim-autopairs.enable = true;
   plugins.nvim-autopairs.settings = {
