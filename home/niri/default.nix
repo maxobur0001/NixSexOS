@@ -8,7 +8,7 @@
         layout = "us,ru";
         options = "grp:ctrl_space_toggle";
       };
-  
+
       touchpad = {
           tap = true;
           natural-scroll = true;
@@ -26,10 +26,10 @@
       scale = 1;
       position = { x = 1280; y = 0; };
     };
-  
+
     # Disable Hot-corner
     gestures.hot-corners.enable = false;
-  
+
     # Fix for electron apps (like discord, obsidian, steam and etc)
     environment."NIXOS_OZONE_WL" = "1";
 
@@ -53,10 +53,10 @@
       }
       {
         matches = [
-          { app-id = "kitty"; title = "^termfilechooser$"; }
           { app-id = "file_chooser"; title = "^ranger$"; }
         ];
         open-floating = true;
+        open-focused = true;
         max-height = 480;
         max-width = 640;
         default-window-height.fixed = 480;
@@ -78,15 +78,19 @@
         urgent = { color = "#D5206A"; };
       };
     };
-    
+
     # Start dunst and background daemon
-    spawn-at-startup = [ 
+    spawn-at-startup = [
       { argv = [ "dunst" ]; }
+      { argv = [ "steam" ]; }
+      { argv = [ "legcord" ]; }
+      { argv = [ "waybar" ]; }
+      { sh = "systemctl --user import-environment PATH && systemctl --user restart xdg-desktop-portal.service"; }
       { sh = "mpvpaper -o \"no-audio loop\" ALL ${./wallpaper.mp4}"; }
     ];
-    
+
     prefer-no-csd = true;
-  
+
     # Binds
     binds = with config.lib.niri.actions; {
       "Mod+T".action = spawn "kitty";

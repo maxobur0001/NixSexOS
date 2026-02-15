@@ -16,7 +16,8 @@
     ./dunst.nix
     ./gh.nix
     ./gtk.nix
-    ./fastfetch
     ./xdg.nix
+    ./fastfetch
+    ./waybar
   ];
 }

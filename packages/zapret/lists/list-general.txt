@@ -45,3 +45,5 @@ betterttv.net
 7tv.app
 7tv.io
 dc6.sherlock-report.at
+aeza.ru
+*.aeza.ru
