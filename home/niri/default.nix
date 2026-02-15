@@ -84,7 +84,6 @@
       { argv = [ "dunst" ]; }
       { argv = [ "steam" ]; }
       { argv = [ "legcord" ]; }
-      { argv = [ "waybar" ]; }
       { sh = "systemctl --user import-environment PATH && systemctl --user restart xdg-desktop-portal.service"; }
       { sh = "mpvpaper -o \"no-audio loop\" ALL ${./wallpaper.mp4}"; }
     ];
