@@ -37,7 +37,7 @@
         library = [
           "${../luals/starfall.lua}"
           "${../luals/glua}"
-          "${../luals/love2d/library}"
+          "${../luals/love2d}"
         ];
       };
     };
