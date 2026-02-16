@@ -77,6 +77,7 @@
     gmad
     legcord
     krita
+    love
   ];
 
   fonts.packages = with pkgs; [

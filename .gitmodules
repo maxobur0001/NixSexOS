@@ -1,0 +1,3 @@
+[submodule "home/nixvim/home/nixvim/luals/love2d"]
+	path = home/nixvim/home/nixvim/luals/love2d
+	url = https://github.com/LuaCATS/love2d

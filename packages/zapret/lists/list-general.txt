@@ -47,3 +47,5 @@ betterttv.net
 dc6.sherlock-report.at
 aeza.ru
 *.aeza.ru
+love2d.org
+www.love2d.org
