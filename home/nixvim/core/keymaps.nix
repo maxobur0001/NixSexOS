@@ -26,5 +26,8 @@
 
     # Esc to close a search
     { key = "<Esc>"; action = "<cmd>nohlsearch<CR>"; mode = "n"; }
+
+    # Love2D start game
+    { key = "<leader>lr"; action = "<cmd>Love<CR>"; mode = "n"; }
   ];
 }

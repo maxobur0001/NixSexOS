@@ -42,4 +42,9 @@
     cmdheight = 0;
     lazyredraw = true;
   };
+  userCommands = {
+    "Love" = {
+      command = ":FloatermNew love ./";
+    };
+  };
 }
