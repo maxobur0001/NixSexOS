@@ -75,7 +75,7 @@
     winetricks
     stylua
     gmad
-    legcord
+    vesktop
     krita
     love
   ];
