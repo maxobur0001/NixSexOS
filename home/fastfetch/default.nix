@@ -3,8 +3,8 @@
     enable = true;
     settings = {
       logo = {
-        source = ./lightbulb.png;
-        width = 16;
+        source = ./building.png;
+        width = 26;
         padding = {
           top = 1;
         };

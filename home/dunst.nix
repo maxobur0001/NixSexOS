@@ -12,15 +12,15 @@
       padding = 12;
       separator_height = 0;
       horizontal_padding = 12;
-      frame_width = 4;
+      frame_width = 2;
       gap_size = 2;
-      font = "Terminess Nerd Font Bold 15";
+      font = "3270 Nerd Font Bold 17";
       max_icon_size = 81;
 
       background = "#000000";
-      foreground = "#9564fd";
-      frame_color = "#9564fd";
-      highlight = "#9564fd";
+      foreground = "#FFFFFF";
+      frame_color = "#FFFFFF";
+      highlight = "#FFFFFF";
     };
 
     service = {

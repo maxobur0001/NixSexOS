@@ -72,10 +72,10 @@
       focus-ring.enable = false;
       border = {
         enable = true;
-        width = 4;
-        active = { color = "#9564fd"; };
-        inactive = { color = "#6442A5"; };
-        urgent = { color = "#D5206A"; };
+        width = 2;
+        active = { color = "#FFFFFF"; };
+        inactive = { color = "#262626"; };
+        urgent = { color = "#AC6D74"; };
       };
     };
 
@@ -83,9 +83,10 @@
     spawn-at-startup = [
       { argv = [ "dunst" ]; }
       { argv = [ "steam" ]; }
-      { argv = [ "legcord" ]; }
+      { argv = [ "vesktop" ]; }
       { sh = "systemctl --user import-environment PATH && systemctl --user restart xdg-desktop-portal.service"; }
-      { sh = "mpvpaper -o \"no-audio loop\" ALL ${./wallpaper.mp4}"; }
+      # { sh = "mpvpaper -o \"no-audio loop\" ALL ${./wallpaper.mp4}"; }
+      { sh = "swaybg -i ${./wallpaper.jpg}"; }
     ];
 
     prefer-no-csd = true;

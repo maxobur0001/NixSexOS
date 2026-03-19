@@ -5,7 +5,7 @@
     text: #9564FD;
     border: #9564FD;
 
-    font: "Terminess Nerd Font Bold 15";
+    font: "3270 Nerd Font Bold 15";
 }
 
 element-text, element-icon , mode-switcher {

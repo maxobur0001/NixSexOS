@@ -1,7 +1,7 @@
 {...}: {
   programs.rofi = {
     enable = true;
-    theme = ./worldmachine.rasi;
+    theme = ./doomer.rasi;
     extraConfig = {
       show-icons = true;
       display-drun = "";

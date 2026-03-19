@@ -8,11 +8,11 @@ c.tabs.position = "top"
 ###### Completion colors ######
 
 COLORS = {
-    "purple": "#9564FD",
+    "purple": "#FFFFFF",
     "black": "#000000",
-    "white": "#FEFEFE",
-    "darkpurple": "#6442A5",
-    "red": "#D5206A"
+    "white": "#FFFFFF",
+    "darkpurple": "#262626",
+    "red": "#AC6D74"
 }
 
 # Category
@@ -33,8 +33,8 @@ c.colors.completion.item.selected.border.bottom = COLORS["purple"]
 c.colors.completion.item.selected.border.top = COLORS["purple"]
 
 # Matched
-c.colors.completion.item.selected.match.fg = COLORS["white"]
-c.colors.completion.match.fg = COLORS["white"]
+c.colors.completion.item.selected.match.fg = "#E6E6E6"
+c.colors.completion.match.fg = "#262626"
 
 # Scrollbar
 c.colors.completion.scrollbar.bg = COLORS["black"]
@@ -81,9 +81,9 @@ c.colors.messages.error.bg = COLORS["red"]
 c.colors.messages.error.fg = COLORS["black"]
 c.colors.messages.error.border = COLORS["red"]
 
-c.colors.messages.warning.bg = "#FFDE81"
+c.colors.messages.warning.bg = "#ACA46D"
 c.colors.messages.warning.fg = COLORS["black"]
-c.colors.messages.warning.border = "#FFDE81"
+c.colors.messages.warning.border = "#ACA46D"
 
 c.colors.messages.info.bg = COLORS["black"]
 c.colors.messages.info.fg = COLORS["purple"]
@@ -139,10 +139,10 @@ c.colors.statusbar.private.fg = COLORS["black"]
 c.colors.statusbar.progress.bg = COLORS["purple"]
 c.colors.statusbar.url.error.fg = COLORS["red"]
 c.colors.statusbar.url.fg = COLORS["purple"]
-c.colors.statusbar.url.success.http.fg = "#63ED5E"
-c.colors.statusbar.url.success.https.fg = "#63ED5E"
+c.colors.statusbar.url.success.http.fg = "#74AC6D"
+c.colors.statusbar.url.success.https.fg = "#74AC6D"
 c.colors.statusbar.url.hover.fg = "#7A71EB"
-c.colors.statusbar.url.warn.fg = "#FFDE81"
+c.colors.statusbar.url.warn.fg = "#ACA46D"
 
 
 ###### Tabs ######
@@ -159,6 +159,13 @@ c.colors.tabs.selected.odd.bg = COLORS["purple"]
 c.colors.tabs.selected.odd.fg = COLORS["black"]
 c.tabs.title.format = "{current_title}" 
 c.tabs.show = "multiple"
+c.tabs.padding = {
+  "bottom": 2,
+  "left": 5,
+  "right": 5,
+  "top": 2
+}
+
 
 # Indicator
 c.colors.tabs.indicator.error = COLORS["red"]
@@ -188,8 +195,8 @@ c.colors.webpage.preferred_color_scheme = "dark"
 
 
 ###### Fonts ######
-c.fonts.prompts = "20px Terminess Nerd Font Mono"
-c.fonts.default_family = "Terminess Nerd Font Mono"
+c.fonts.prompts = "20px 3270 Nerd Font Mono"
+c.fonts.default_family = "3270 Nerd Font Mono"
 c.fonts.default_size = "20px"
   '';
 }

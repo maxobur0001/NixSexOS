@@ -1,4 +1,4 @@
-{pkgs, lib, ...}: {
+{pkgs, pkgs-unstable, lib, ...}: {
   programs.xwayland.enable = true;
   programs.niri = {
     enable = true;
@@ -12,6 +12,9 @@
     fontPackages = with pkgs; [
       noto-fonts
       wqy_zenhei
+    ];
+    extraCompatPackages = with pkgs; [
+      proton-ge-bin
     ];
   };
   programs.appimage.enable = true;
@@ -58,7 +61,7 @@
     p7zip
     unzip
     unrar
-    rustup
+    pkgs-unstable.rustup
     gamemode
     gnome-calculator
     gcc
@@ -78,10 +81,18 @@
     vesktop
     krita
     love
+    kdePackages.kdenlive
+    aseprite
+    python3
+    wf-recorder
+    sqlite
+    chicago95
   ];
 
   fonts.packages = with pkgs; [
     noto-fonts
+    montserrat
+    nerd-fonts._3270
   ];
 
   fonts.fontconfig.enable = true;

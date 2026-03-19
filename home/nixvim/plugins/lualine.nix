@@ -6,10 +6,10 @@
       disabled_filetypes.statusline = [ "packer" "neo-tree" "trouble" ];
       theme = let
         colors = {
-          bg = "#1e1e2e";
-          fg = "#cdd6f4";
-          alt_bg = "#89b4fa";
-          alt_fg = "#1e1e2e";
+          bg = "#000000";
+          fg = "#FFFFFF";
+          alt_bg = "#E6E6E6";
+          alt_fg = "#000000";
         };
       in {
         normal = {
@@ -29,18 +29,23 @@
       # Mode
       lualine_b = [ {
         __unkeyed-1 = "mode";
-        separator = { right = ""; left = ""; };
+        separator = { right = "█"; left = "█"; };
         padding = { left = 1; right = 1; };
       } ];
 
-      lualine_c = [ {} ];
-      lualine_x = [ {} ];
+      lualine_c = [ {
+        __unkeyed-1 = "filename";
+        # padding = { left = 1; right = 1; };
+      } ];
+      lualine_x = [ {
+        __unkeyed-1 = "searchcount";
+      } ];
 
       # Clock
       lualine_y = [ {
         __unkeyed-1 = "datetime";
         style = "%H:%M:%S";
-        separator = { right = ""; left = ""; };
+        separator = { right = "█"; left = "█"; };
         padding = { left = 1; right = 1; };
       } ];
 

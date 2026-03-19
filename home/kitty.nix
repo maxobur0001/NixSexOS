@@ -2,9 +2,9 @@
   programs.kitty = {
     enable = true;
     font = {
-      package = pkgs.nerd-fonts.terminess-ttf;
-      name = "Terminess Nerd Font Mono";
-      size = 15;
+      package = pkgs.nerd-fonts._3270;
+      name = "3270 Nerd Font Mono";
+      size = 16;
     };
     shellIntegration.enableZshIntegration = true;
     settings = {
@@ -16,17 +16,17 @@
   };
   programs.kitty.extraConfig = ''
 # The basic colors
-foreground #FEFEFE
+foreground #FFFFFF
 background #000000
 selection_foreground #000000
-selection_background #FEFEFE
+selection_background #FFFFFF
 
 # Cursor colors
-cursor #FEFEFE
+cursor #FFFFFF
 cursor_text_color #000000
 
 # URL underline color when hovering with mouse
-url_color #FEFEFE
+url_color #FFFFFF
 
 # OS Window titlebar colors
 wayland_titlebar_color system
@@ -34,34 +34,34 @@ macos_titlebar_color system
 
 # black
 color0 #000000
-color8 #000000
+color8 #262626
 
 # red
-color1 #D5206A
-color9 #D5206A
+color1 #AC6D74
+color9 #D6B8BC
 
 # green
-color2  #63ED5E
-color10 #63ED5E
+color2  #74AC6D
+color10 #BCD6B8
 
 # yellow
-color3  #FFDE81
-color11 #FFDE81
+color3  #ACA46D
+color11 #D6D3B8
 
 # blue
-color4  #7A71EB
-color12 #7A71EB
+color4  #6D74AC
+color12 #B8BCD6
 
 # magenta
-color5  #FE54BE
-color13 #FE54BE
+color5  #A46DAC
+color13 #D3B8D6
 
 # cyan
-color6  #30B6C6
-color14 #30B6C6
+color6  #6DACA4
+color14 #B8D6D3
 
 # white
-color7  #FEFEFE
-color15 #FEFEFE
+color7  #E6E6E6
+color15 #FFFFFF
   '';
 }

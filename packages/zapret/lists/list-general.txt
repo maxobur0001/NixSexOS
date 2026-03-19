@@ -49,3 +49,11 @@ aeza.ru
 *.aeza.ru
 love2d.org
 www.love2d.org
+media.moddb.com
+sjc3.dl.dbolical.com
+fmt2.dl.dbolical.com
+images.moddb.com
+fmt2.dl.dbolical.com
+sjc3.dl.dbolical.com
+dfw.dl.dbolical.com
+ams.dl.dbolical.com
