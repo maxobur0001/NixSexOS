@@ -4,7 +4,7 @@
     font = {
       package = pkgs.nerd-fonts._3270;
       name = "3270 Nerd Font Mono";
-      size = 16;
+      size = 13;
     };
     shellIntegration.enableZshIntegration = true;
     settings = {

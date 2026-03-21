@@ -7,13 +7,9 @@
       url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    niri = {
-      url = "github:sodiboo/niri-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     nixvim.url = "github:nix-community/nixvim";
   };
-  outputs = { nixpkgs, nixpkgs-unstable, home-manager, niri, nixvim, ... }@inputs: 
+  outputs = { nixpkgs, nixpkgs-unstable, home-manager, nixvim, ... }@inputs: 
     let
       system = "x86_64-linux";
       pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
@@ -29,7 +25,6 @@
             inherit pkgs-unstable;
           };
           modules = [
-            niri.nixosModules.niri
             { networking.hostName = hostname; }
             ./configuration.nix
             ./hosts/${hostname}/hardware-configuration.nix
@@ -44,7 +39,6 @@
     homeConfigurations.maxobur0001 = home-manager.lib.homeManagerConfiguration {
       pkgs = nixpkgs.legacyPackages.${system};
       modules = [
-        niri.homeModules.niri
         nixvim.homeModules.nixvim
         ./home
       ];

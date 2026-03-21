@@ -10,7 +10,6 @@
     ./kitty.nix
     ./zsh.nix
     ./nixvim
-    ./niri
     ./rofi
     ./qutebrowser
     ./dunst.nix
@@ -18,5 +17,6 @@
     ./gtk.nix
     ./xdg.nix
     ./fastfetch
+    ./i3
   ];
 }

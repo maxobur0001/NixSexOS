@@ -1,5 +1,5 @@
 {lib, ...}: {
-  colorschemes.base16.enable = true;
+  # colorschemes.base16.enable = true;
   colorschemes.base16.colorscheme = {
     base00 = "#000000";
     base01 = "#262626";
