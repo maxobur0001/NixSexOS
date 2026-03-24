@@ -1,4 +1,15 @@
 {lib, ...}: {
+  programs.i3blocks = {
+    enable = true;
+    bars = {
+      main = {
+        time = {
+          command = "date +%T";
+          interval = 1;
+        };
+      };
+    };
+  };
   xsession.windowManager.i3 = {
     enable = true;
     config = {
@@ -9,6 +20,10 @@
       };
       window = {
         border = 2;
+        titlebar = false;
+      };
+      floating = {
+        modifier = "Mod4";
         titlebar = false;
       };
       gaps = {
@@ -42,6 +57,21 @@
           childBorder = "#AC6D74";
         };
       };
+      bars = [
+        {
+          colors = {
+            focusedWorkspace = { border = "#FFFFFF"; background = "#FFFFFF"; text = "#000000"; };
+            inactiveWorkspace = { border = "#000000"; background = "#000000"; text = "#E6E6E6"; };
+            background = "#000000";
+          };
+          fonts = {
+            names = ["3270 Nerd Font Mono"];
+            size = 11.0;
+          };
+          mode = "hide";
+          statusCommand = "i3blocks -c ~/.config/i3blocks/main";
+        }
+      ];
       startup = [
         { command = "dunst"; notification = true; }
         { command = "feh --bg-center ${./wallpaper.jpg}"; }
@@ -52,12 +82,16 @@
         "mod4+t" = "exec kitty";
         "mod4+q" = "kill";
         "mod4+space" = "exec dmenu_run";
-        "mod4+Shift+e" = "exec i3-msg exit";
+        "mod4+p" = "exec ${./scripts/powermenu/script} ${./scripts/powermenu/powermenu.rasi}";
+        "mod4+Shift+e" = "exec \"i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'\"";
 
         "XF86AudioRaiseVolume" = "exec ${./scripts/media} volume_up";
         "XF86AudioLowerVolume" = "exec ${./scripts/media} volume_down";
         "XF86AudioPlay" = "exec ${./scripts/media} play_pause";
         "XF86AudioMute" = "exec ${./scripts/media} volume_mute";
+        "XF86AudioNext" = "exec playerctl next";
+        "XF86AudioPrev" = "exec playerctl previous";
+
         "mod4+Shift+3" = "exec ${./scripts/screenshot}";
         "mod4+Shift+4" = "exec ${./scripts/selection-screenshot}";
 
@@ -76,7 +110,8 @@
         "mod4+Shift+plus" = "resize grow height 10 px or 10 ppt";
         "mod4+Shift+minus" = "resize shrink height 10 px or 10 ppt";
 
-        "mod4+Shift+v" = "fullscreen";
+        "mod4+Shift+f" = "fullscreen";
+        "mod4+Shift+v" = "focus mode_toggle";
         "mod4+v" = "floating toggle";
         "mod4+c" = "move position center";
 

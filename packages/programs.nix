@@ -13,6 +13,10 @@
     ];
   };
   programs.appimage.enable = true;
+  programs.amnezia-vpn = {
+    enable = true;
+    package = pkgs-unstable.amnezia-vpn;
+  };
   programs.adb.enable = true;
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [

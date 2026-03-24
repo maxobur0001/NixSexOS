@@ -1,9 +1,7 @@
 * {
     bg: #000000;
-    entry: #9564FD;
-    entry-text: #000000;
-    text: #9564FD;
-    border: #9564FD;
+    text: #FFFFFF;
+    border: #FFFFFF;
 
     font: "3270 Nerd Font Bold 15";
 }
@@ -29,17 +27,6 @@ mainbox {
 
 inputbar {
     enabled: false;
-    children: [entry];
-    background-color: @bg;
-}
-
-entry {
-    padding: 8px 10px;
-    margin: 20px 0 10px 1px;
-    text-color: @entry-text;
-    background-color: @entry;
-    placeholder: "Search";
-    placeholder-color: @entry-text;
 }
 
 listview {
