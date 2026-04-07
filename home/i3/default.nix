@@ -92,6 +92,7 @@
         "XF86AudioNext" = "exec playerctl next";
         "XF86AudioPrev" = "exec playerctl previous";
 
+        "mod4+Shift+2" = "exec maim -s | feh -s -";
         "mod4+Shift+3" = "exec ${./scripts/screenshot}";
         "mod4+Shift+4" = "exec ${./scripts/selection-screenshot}";
 

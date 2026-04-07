@@ -3713,7 +3713,7 @@ _G["CLIENT"] = nil
 	--- isValid - shared - libs_sh/builtins.lua#L1182
 	---@param object any Table to check
 	---@return boolean undefined If it is valid
-	function _G.isValid(object) end
+	function _G.isValid(object) return object ~= nil end
 	--- getScripts - shared - libs_sh/builtins.lua#L779
 	---@param ent Entity? Optional target entity. Default: chip()
 	---@return table undefined Table where keys are paths and values are strings
