@@ -10,6 +10,7 @@
     ./kitty.nix
     ./zsh.nix
     ./nixvim
+    ./niri
     ./rofi
     ./qutebrowser
     ./dunst.nix

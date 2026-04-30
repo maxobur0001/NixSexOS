@@ -1,4 +1,9 @@
 {pkgs, pkgs-unstable, lib, ...}: {
+  programs.xwayland.enable = true;
+  programs.niri = {
+    enable = true;
+    package = pkgs.niri;
+  };
   programs.zsh.enable = true;
   programs.git.enable = true;
   programs.gamescope.enable = true;
@@ -42,10 +47,15 @@
     brightnessctl
     pulseaudio
     libnotify
+    wl-clipboard
     xclip
     maim
     playerctl
+    swaybg
+    grim
+    slurp
     eza
+    xwayland-satellite
     blobdrop
     btop
     mpv

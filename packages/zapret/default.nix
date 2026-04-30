@@ -1,4 +1,7 @@
 {pkgs-unstable, ...}: {
+  imports = [
+    ./hosts.nix
+  ];
   services.zapret = {
     enable = true;
     package = pkgs-unstable.zapret;
