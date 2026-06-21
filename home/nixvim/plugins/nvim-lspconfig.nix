@@ -33,7 +33,7 @@
       runtime.version = "LuaJIT";
       diagnostics.globals = [ "vim" ];
       workspace = {
-        checkThirdParty = false;
+        checkThirdParty = true;
         library = [
           "${../luals/starfall.lua}"
           "${../luals/glua}"

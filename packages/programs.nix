@@ -1,5 +1,27 @@
 {pkgs, pkgs-unstable, lib, ...}: {
   programs.xwayland.enable = true;
+  programs.alvr = {
+    enable = true;
+    package = pkgs.alvr.overrideAttrs (
+      finalAttrs: prevAttrs: {
+        version = "20.13.0";
+
+        src = pkgs.fetchFromGitHub {
+          owner = "alvr-org";
+          repo = "ALVR";
+          tag = "v${finalAttrs.version}";
+          fetchSubmodules = true;
+          hash = "sha256-h7/fuuolxbNkjUbqXZ7NTb1AEaDMFaGv/S05faO2HIc=";
+        };
+
+        cargoDeps = pkgs.rustPlatform.fetchCargoVendor {
+          inherit (finalAttrs) src;
+          hash = "sha256-A0ADPMhsREH1C/xpSxW4W2u4ziDrKRrQyY5kBDn//gQ=";
+        };
+      }
+    );
+    openFirewall = true;
+  };
   programs.niri = {
     enable = true;
     package = pkgs.niri;
@@ -95,6 +117,9 @@
     python3
     wf-recorder
     sqlite
+    sidequest
+    r2modman
+    chromium
   ];
 
   fonts.packages = with pkgs; [

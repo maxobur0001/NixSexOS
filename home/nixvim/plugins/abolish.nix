@@ -1,0 +1,3 @@
+{...}: {
+  plugins.abolish.enable = true;
+}

@@ -55,6 +55,8 @@
     autoindent = true;
     smartindent = true;
     smarttab = true;
+    foldmethod = "indent";
+    foldenable = false;
     tabstop = 2;
     softtabstop = 2;
     shiftwidth = 2;

@@ -4,6 +4,7 @@
     ./neo-tree.nix
     ./indent-blankline.nix
     ./telescope.nix
+    ./abolish.nix
     ./autopairs.nix
     ./nvim-cmp.nix
     ./nvim-lspconfig.nix

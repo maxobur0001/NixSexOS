@@ -14,6 +14,7 @@
     ./rofi
     ./qutebrowser
     ./dunst.nix
+    ./picom.nix
     ./gh.nix
     ./gtk.nix
     ./xdg.nix

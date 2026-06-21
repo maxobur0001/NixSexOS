@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{pkgs, pkgs-unstable, ...}: {
   imports = [
     ./zapret
   ];
@@ -36,6 +36,19 @@
     joinNetworks = [
       "08752e18b1eb3beb"
     ];
+  };
+  services.flatpak = {
+    enable = true;
+    packages = [
+      "io.github.glaumar.QRookie"
+      "io.github.wivrn.wivrn"
+    ];
+  };
+  services.avahi.enable = true;
+  services.wivrn = {
+    enable = true;
+    package = pkgs-unstable.wivrn;
+    openFirewall = true;
   };
   hardware.bluetooth = {
     enable = true;
