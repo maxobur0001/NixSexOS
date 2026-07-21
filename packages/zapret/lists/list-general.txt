@@ -130915,3 +130915,12 @@ play.google.com
 play.google.ru
 gm-donate.net
 mod.io
+blender.org
+docs.blender.org
+wiki.facepunch.com
+gmodwiki.com
+imgur.com
+i.imgur.com
+reddit.com
+*.reddit.com
+api.github.com

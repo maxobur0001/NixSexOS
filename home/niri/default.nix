@@ -33,6 +33,10 @@
     # Fix for electron apps (like discord, obsidian, steam and etc)
     environment."NIXOS_OZONE_WL" = "1";
 
+    cursor = {
+        size = 32;
+    };
+
     # Rule for transparent background in overview
     layer-rules = [
       {

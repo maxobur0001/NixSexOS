@@ -9,6 +9,7 @@
     };
     nixvim.url = "github:nix-community/nixvim";
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
+    # prismlauncher.url = "github:Diegiwg/PrismLauncher-Cracked/main";
     niri = {
       url = "github:sodiboo/niri-flake";
       inputs.nixpkgs.follows = "nixpkgs";

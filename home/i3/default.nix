@@ -74,7 +74,7 @@
       ];
       startup = [
         { command = "dunst"; notification = true; }
-        { command = "feh --bg-center ${./wallpaper.jpg}"; }
+        { command = "feh --bg-fill ${./wallpaper.jpg}"; }
       ];
       keybindings = let
         wss = lib.lists.range 0 9;

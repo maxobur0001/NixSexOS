@@ -1,4 +1,4 @@
-{pkgs, pkgs-unstable, lib, ...}: {
+{pkgs, pkgs-unstable, lib, inputs, ...}: {
   programs.xwayland.enable = true;
   programs.alvr = {
     enable = true;
@@ -102,7 +102,8 @@
     gdb
     ffmpeg
     blender
-    lua
+    lua5_2
+    luarocks
     gimp
     feh
     wineWowPackages.stable
@@ -120,6 +121,10 @@
     sidequest
     r2modman
     chromium
+    yazi
+    obs-studio
+    # inputs.prismlauncher.packages.${pkgs.stdenv.system}.prismlauncher
+    yt-dlp
   ];
 
   fonts.packages = with pkgs; [
