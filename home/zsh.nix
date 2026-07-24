@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{pkgs, config, ...}: {
   programs.zsh = {
     enable = true;
     syntaxHighlighting.enable = true;
@@ -24,6 +24,7 @@
       ];
       theme = "simple";
     };
+    dotDir = "${config.xdg.configHome}/zsh";
   };
 
   programs.zoxide = {

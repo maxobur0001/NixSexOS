@@ -31,25 +31,7 @@
     host  all  all 127.0.0.1/32 md5
     '';
   };
-  services.zerotierone = {
-    enable = true;
-    joinNetworks = [
-      "08752e18b1eb3beb"
-    ];
-  };
-  services.flatpak = {
-    enable = true;
-    packages = [
-      "io.github.glaumar.QRookie"
-      "io.github.wivrn.wivrn"
-    ];
-  };
   services.avahi.enable = true;
-  services.wivrn = {
-    enable = true;
-    package = pkgs-unstable.wivrn;
-    openFirewall = true;
-  };
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = true;

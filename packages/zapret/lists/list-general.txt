@@ -130923,4 +130923,4 @@ imgur.com
 i.imgur.com
 reddit.com
 *.reddit.com
-api.github.com
+click.discord.com

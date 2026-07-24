@@ -7,7 +7,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.supportedFilesystems = [ "ntfs" ];
-  boot.kernelPackages = pkgs.linuxPackages_zen;
+  boot.kernelPackages = pkgs.linuxPackages;
   networking = {
     networkmanager.enable = true;
     firewall = {

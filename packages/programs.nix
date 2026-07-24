@@ -1,27 +1,5 @@
 {pkgs, pkgs-unstable, lib, inputs, ...}: {
   programs.xwayland.enable = true;
-  programs.alvr = {
-    enable = true;
-    package = pkgs.alvr.overrideAttrs (
-      finalAttrs: prevAttrs: {
-        version = "20.13.0";
-
-        src = pkgs.fetchFromGitHub {
-          owner = "alvr-org";
-          repo = "ALVR";
-          tag = "v${finalAttrs.version}";
-          fetchSubmodules = true;
-          hash = "sha256-h7/fuuolxbNkjUbqXZ7NTb1AEaDMFaGv/S05faO2HIc=";
-        };
-
-        cargoDeps = pkgs.rustPlatform.fetchCargoVendor {
-          inherit (finalAttrs) src;
-          hash = "sha256-A0ADPMhsREH1C/xpSxW4W2u4ziDrKRrQyY5kBDn//gQ=";
-        };
-      }
-    );
-    openFirewall = true;
-  };
   programs.niri = {
     enable = true;
     package = pkgs.niri;
@@ -40,11 +18,6 @@
     ];
   };
   programs.appimage.enable = true;
-  programs.amnezia-vpn = {
-    enable = true;
-    package = pkgs-unstable.amnezia-vpn;
-  };
-  programs.adb.enable = true;
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
     stdenv.cc.cc
@@ -85,7 +58,6 @@
     audacity
     obsidian
     imagemagick
-    libreoffice
     bluetui
     thunderbird
     telegram-desktop
@@ -93,7 +65,6 @@
     p7zip
     unzip
     unrar
-    pkgs-unstable.rustup
     gamemode
     gnome-calculator
     gcc
@@ -106,7 +77,7 @@
     luarocks
     gimp
     feh
-    wineWowPackages.stable
+    wineWow64Packages.stable
     winetricks
     stylua
     gmad
@@ -114,12 +85,9 @@
     krita
     love
     kdePackages.kdenlive
-    aseprite
     python3
     wf-recorder
     sqlite
-    sidequest
-    r2modman
     chromium
     yazi
     obs-studio
