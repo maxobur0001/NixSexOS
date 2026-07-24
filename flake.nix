@@ -8,7 +8,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixvim.url = "github:nix-community/nixvim";
-    # prismlauncher.url = "github:Diegiwg/PrismLauncher-Cracked/main";
+    prismlauncher.url = "github:Diegiwg/PrismLauncher-Cracked/main";
     niri = {
       url = "github:sodiboo/niri-flake";
       inputs.nixpkgs.follows = "nixpkgs";

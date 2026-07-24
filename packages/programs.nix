@@ -33,6 +33,7 @@
     enable = true;
     package = pkgs.i3lock-color;
   };
+  programs.kdeconnect.enable = true;
 
   environment.systemPackages = with pkgs; [
     vim
@@ -91,7 +92,7 @@
     chromium
     yazi
     obs-studio
-    # inputs.prismlauncher.packages.${pkgs.stdenv.system}.prismlauncher
+    inputs.prismlauncher.packages.${pkgs.stdenv.system}.prismlauncher
     yt-dlp
   ];
 
