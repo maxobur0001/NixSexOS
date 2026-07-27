@@ -9,12 +9,13 @@
     };
     nixvim.url = "github:nix-community/nixvim";
     prismlauncher.url = "github:Diegiwg/PrismLauncher-Cracked/main";
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
     niri = {
       url = "github:sodiboo/niri-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  outputs = { nixpkgs, nixpkgs-unstable, home-manager, niri, nixvim, ... }@inputs: 
+  outputs = { nixpkgs, nixpkgs-unstable, home-manager, niri, nixvim, nix-flatpak, ... }@inputs: 
     let
       system = "x86_64-linux";
       pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
@@ -31,6 +32,7 @@
           };
           modules = [
             { networking.hostName = hostname; }
+            nix-flatpak.nixosModules.nix-flatpak
             niri.nixosModules.niri
             ./configuration.nix
             ./hosts/${hostname}/hardware-configuration.nix

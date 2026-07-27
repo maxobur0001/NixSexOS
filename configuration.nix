@@ -8,6 +8,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.supportedFilesystems = [ "ntfs" ];
   boot.kernelPackages = pkgs.linuxPackages;
+  boot.crashDump.enable = true;
   networking = {
     networkmanager.enable = true;
     firewall = {

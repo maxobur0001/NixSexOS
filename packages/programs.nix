@@ -6,7 +6,6 @@
   };
   programs.zsh.enable = true;
   programs.git.enable = true;
-  programs.gamescope.enable = true;
   programs.steam = {
     enable = true;
     fontPackages = with pkgs; [
@@ -89,7 +88,6 @@
     python3
     wf-recorder
     sqlite
-    chromium
     yazi
     obs-studio
     inputs.prismlauncher.packages.${pkgs.stdenv.system}.prismlauncher

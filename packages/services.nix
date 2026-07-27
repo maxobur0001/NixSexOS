@@ -9,10 +9,10 @@
     windowManager.i3.enable = true;
     excludePackages = [ pkgs.xterm ];
   };
-  services.printing = {
-    enable = true;
-    drivers = [ pkgs.pantum-driver ];
-  };
+  # services.printing = {
+  #   enable = true;
+  #   drivers = [ pkgs.pantum-driver ];
+  # };
   services.libinput.enable = true;
   services.openssh.enable = true;
   services.pipewire = {
@@ -23,17 +23,29 @@
     wireplumber.enable = true;
     jack.enable = true;
   };
-  services.postgresql = {
-    enable = true;
-    ensureDatabases = [ "vanillitybot" ];
-    authentication = pkgs.lib.mkOverride 10 ''
-    local all  all  trust
-    host  all  all 127.0.0.1/32 md5
-    '';
-  };
+  # services.postgresql = {
+  #   enable = true;
+  #   ensureDatabases = [ "vanillitybot" ];
+  #   authentication = pkgs.lib.mkOverride 10 ''
+  #   local all  all  trust
+  #   host  all  all 127.0.0.1/32 md5
+  #   '';
+  # };
   services.avahi.enable = true;
-  hardware.bluetooth = {
+  # hardware.bluetooth = {
+  #   enable = true;
+  #   powerOnBoot = true;
+  # };
+  services.flatpak = {
     enable = true;
-    powerOnBoot = true;
+    packages = [
+      "io.github.glaumar.QRookie"
+      "io.github.wivrn.wivrn"
+    ];
+  };
+  services.wivrn = {
+    enable = true;
+    package = pkgs-unstable.wivrn;
+    openFirewall = true;
   };
 }
